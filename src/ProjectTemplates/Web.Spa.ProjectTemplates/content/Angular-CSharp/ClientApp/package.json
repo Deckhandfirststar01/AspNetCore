@@ -8,7 +8,9 @@
     "build:ssr": "ng run Company.WebApplication1:server:dev",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +32,8 @@
     "bootstrap": "^4.3.1",
     "jquery": "3.3.1",
     "oidc-client": "^1.6.1",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.5",
@@ -55,5 +58,6 @@
     "protractor": "~5.4.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1"
-  }
+  },
+  "snyk": true
 }
